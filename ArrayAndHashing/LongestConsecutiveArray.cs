@@ -2,7 +2,7 @@ namespace Algorithm.ArrayAndHashing;
 
 public class LongestConsecutiveArray
 {
-    public int LongestConsecutive(int[] nums) {
+    public static int LongestConsecutive(int[] nums) {
         // input: duplicate numbers are allowed, do not have to be consecutive with original array
         // exmaple: [100, 4, 200, 1, 3, 2]
         // output: 4
