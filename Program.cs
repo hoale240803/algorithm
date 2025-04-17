@@ -1,5 +1,7 @@
 ﻿using Algorithm.ArrayAndHashing;
+using Algorithm.TwoPointers;
 
-TwoIntegerSumArray twoIntegerSumII = new TwoIntegerSumArray();
 
-Console.WriteLine(twoIntegerSumII.TwoSum([2,7,11,15], 9));
+TrappingRainWater trappingRainWater = new TrappingRainWater();
+Console.WriteLine(trappingRainWater.Trap([0,2,0,3,1,0,1,3,2,1]));
+
