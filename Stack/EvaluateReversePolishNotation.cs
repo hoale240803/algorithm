@@ -47,8 +47,6 @@ public class EvaluateReversePolishNotation
                 stack.Push(int.Parse(token));
             }
         }
-
-        return 0;
-
+        return stack.Pop();
     }
 }
