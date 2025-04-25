@@ -1,11 +1,18 @@
 ﻿using Algorithm.BinarySearch;
 using Algorithm.SlideWindow;
 
-LongestSubstringWithoutRepeatingCharacters longestSubstringWithoutRepeatingCharacters = new LongestSubstringWithoutRepeatingCharacters();
 
-Console.WriteLine(longestSubstringWithoutRepeatingCharacters.LengthOfLongestSubstring("zxyzxyz"));
+PermutationInString permutationInString = new PermutationInString();
 
-Console.WriteLine(longestSubstringWithoutRepeatingCharacters.LengthOfLongestSubstring("xxxx"));
+Console.WriteLine(permutationInString.CheckInclusion("abc", "lecabee"));
+Console.WriteLine(permutationInString.CheckInclusion("abc", "lecaabee"));
+
+
+
+
+
+
+
 
 
 
