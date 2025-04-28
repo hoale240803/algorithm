@@ -9,4 +9,16 @@ public class ListNode
         this.val = val;
         this.next = next;
     }
+
+    public void PrintList()
+    {
+        ListNode current = this;
+        while (current != null)
+        {
+            Console.Write(current.val + " ");
+            current = current.next; 
+        }
+        Console.WriteLine();
+    }
+
 }
