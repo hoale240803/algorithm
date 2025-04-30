@@ -2,16 +2,14 @@
 using Algorithm.SlideWindow;
 using Algorithm.LinkedList;
 using LinkedList;
-
-// output: 1 2 3 5
-RemoveNodeFromEndOfLinkedList removeNodeFromEndOfLinkedList = new RemoveNodeFromEndOfLinkedList();
-ListNode list1 = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
-removeNodeFromEndOfLinkedList.RemoveNthFromEnd(list1, 2);
-list1.PrintList();
+using Algorithm.Tree;
 
 
-
-
+InvertBinaryTree invertBinaryTree = new InvertBinaryTree();
+var tree = new TreeNode(1, new TreeNode(2, new TreeNode(4), new TreeNode(5)), new TreeNode(3, new TreeNode(6), new TreeNode(7)));
+tree.PrintTree();
+var result = invertBinaryTree.InvertTree(tree);
+result.PrintTree();
 
 
 
