@@ -3,13 +3,20 @@ using Algorithm.SlideWindow;
 using Algorithm.LinkedList;
 using LinkedList;
 using Algorithm.Tree;
+using Tree;
 
 
-InvertBinaryTree invertBinaryTree = new InvertBinaryTree();
-var tree = new TreeNode(1, new TreeNode(2, new TreeNode(4), new TreeNode(5)), new TreeNode(3, new TreeNode(6), new TreeNode(7)));
-tree.PrintTree();
-var result = invertBinaryTree.InvertTree(tree);
-result.PrintTree();
+// MaximumDepthOfBinaryTree maximumDepthOfBinaryTree = new MaximumDepthOfBinaryTree();
+// var tree = new TreeNode(1, new TreeNode(2, new TreeNode(4), new TreeNode(5)), new TreeNode(3, new TreeNode(6), new TreeNode(7)));
+// var result = maximumDepthOfBinaryTree.MaxDepth(tree);
+// Console.WriteLine(result);
+
+MaximumDepthOfBinaryTree maximumDepthOfBinaryTree = new MaximumDepthOfBinaryTree();
+// empty tree
+var result2 = maximumDepthOfBinaryTree.MaxDepth(null);
+Console.WriteLine(result2);
+
+
 
 
 

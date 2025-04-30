@@ -16,7 +16,7 @@ public class ListNode
         while (current != null)
         {
             Console.Write(current.val + " ");
-            current = current.next; 
+            current = current.next;
         }
         Console.WriteLine();
     }
