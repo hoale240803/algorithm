@@ -10,7 +10,7 @@ public class ListNode
         this.next = next;
     }
 
-    public void PrintList()
+    public void PrintBFS()
     {
         ListNode current = this;
         while (current != null)
@@ -21,4 +21,14 @@ public class ListNode
         Console.WriteLine();
     }
 
+    public void PrintDFS()
+    {
+        if (this == null)
+        {
+            Console.WriteLine();
+            return;
+        }   
+        Console.Write(this.val + " ");
+        this.next.PrintDFS();
+    }
 }
