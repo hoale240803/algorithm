@@ -1,6 +1,5 @@
 namespace Tree;
 
-
 public class TreeNode
 {
     public int val;
@@ -15,7 +14,7 @@ public class TreeNode
     }
 
     // todo: print the tree breadth first   
-    public void PrintTree()
+    public void PrintBFS()
     {
         var queue = new Queue<TreeNode>();
         queue.Enqueue(this);
@@ -27,5 +26,13 @@ public class TreeNode
             if (node.left != null) queue.Enqueue(node.left);
             if (node.right != null) queue.Enqueue(node.right);
         }
+    }
+
+
+    public void PrintDFS()
+    {
+        Console.WriteLine(val);
+        if (left != null) left.PrintDFS();
+        if (right != null) right.PrintDFS();
     }
 }

@@ -5,34 +5,22 @@ using LinkedList;
 using BinarySearch;
 using Tree;
 
-// Input: root = [1,2,3,null,null,4]
+// Input: p = [1,2,3], q = [1,2,3]
 // Output: true
+SameBinaryTree sameBinaryTree = new SameBinaryTree();
+TreeNode p = new TreeNode(1);
+TreeNode p1 = new TreeNode(2);
+TreeNode p2 = new TreeNode(3);
+p.left = p1;
+p.right = p2;
+Console.WriteLine(sameBinaryTree.IsSameTree(p, p));
 
-BalancedBinaryTree balancedBinaryTree = new BalancedBinaryTree();
-TreeNode node1 = new TreeNode(1);
-TreeNode node2 = new TreeNode(2);
-TreeNode node3 = new TreeNode(3);
-TreeNode node4 = new TreeNode(4);
-node1.left = node2;
-node1.right = node3;
-node3.left = node4;
-Console.WriteLine(balancedBinaryTree.IsBalanced(node1));
-
-
-// Input: root = [1,2,3,null,null,4,null,5]
+// Input: p = [4,7], q = [4,null,7]
 // Output: false
-
-BalancedBinaryTree balancedBinaryTree2 = new BalancedBinaryTree();
-TreeNode root2 = new TreeNode(1, new TreeNode(2, null, null), new TreeNode(3, new TreeNode(4, null, null), new TreeNode(5, null, null)));
-Console.WriteLine(balancedBinaryTree2.IsBalanced(root2));
-
-
-
-
-
-
-
-
+TreeNode q = new TreeNode(4);
+TreeNode q1 = new TreeNode(7);
+q.left = q1;
+Console.WriteLine(sameBinaryTree.IsSameTree(p, q));
 
 
 

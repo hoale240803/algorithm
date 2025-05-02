@@ -11,27 +11,21 @@ namespace BinarySearch
             // A height-balanced binary tree is defined as a binary tree in which the left and 
             // right subtrees of every node differ in height by no more than 1.            
 
-            // Base case: if the tree is empty, it is balanced
-            if (root == null) return true;
-
-            // Get the height of the left and right subtrees
-            int leftHeight = GetHeight(root.left);
-            int rightHeight = GetHeight(root.right);
-
-            // If the left and right subtrees are balanced and the difference between their heights is at most 1, then the tree is balanced
-            return IsBalanced(root.left) && IsBalanced(root.right) && Math.Abs(leftHeight - rightHeight) <= 1;
+            // Apply DFS to check if the tree is balanced   
+            return DFS(root) != -1;
         }
 
-        private int GetHeight(TreeNode root)
+        private int DFS(TreeNode root)
         {
             if (root == null) return 0;
 
-            // Get the height of the left and right subtrees
-            int leftHeight = GetHeight(root.left);
-            int rightHeight = GetHeight(root.right);
+            int left = DFS(root.left);
+            int right = DFS(root.right);
 
-            // Return the height of the tree
-            return Math.Max(leftHeight, rightHeight) + 1;
+            if (left == -1 || right == -1 || Math.Abs(left - right) > 1) return -1;
+
+            return Math.Max(left, right) + 1;
         }
+
     }
 }
