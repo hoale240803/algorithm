@@ -3,10 +3,10 @@ namespace algorithm.Candles
 {
     public class Candle
     {
-        public static int CalculateTotalBurnableCandleV1(int n, int k)
+        public static int CalculateTotalBurnableCandleV1(int initialCandles, int leftoversPerCandle)
         {
             int totalCandles = 0;
-            int candlesToBurn = n;
+            int candlesToBurn = initialCandles;
             int leftoverCarry = 0;
 
             while (candlesToBurn > 0)
@@ -14,7 +14,7 @@ namespace algorithm.Candles
                 int leftovers = BurnCandles(candlesToBurn);
                 totalCandles += candlesToBurn;
 
-                (candlesToBurn, leftoverCarry) = GenerateCandles(leftovers, k, leftoverCarry);
+                (candlesToBurn, leftoverCarry) = GenerateCandles(leftovers, leftoversPerCandle, leftoverCarry);
             }
 
             return totalCandles;
@@ -25,19 +25,19 @@ namespace algorithm.Candles
             return candlesToBurn;
         }
 
-        private static (int candles, int leftoverCarry) GenerateCandles(int leftovers, int k, int leftoverCarry)
+        private static (int candles, int leftoverCarry) GenerateCandles(int leftovers, int leftoversPerCandle, int leftoverCarry)
         {
             int totalLeftovers = leftovers + leftoverCarry;
-            int newCandles = totalLeftovers / k;
-            int remainingLeftovers = totalLeftovers % k;
+            int newCandles = totalLeftovers / leftoversPerCandle;
+            int remainingLeftovers = totalLeftovers % leftoversPerCandle;
 
             return (newCandles, remainingLeftovers);
         }
 
-        public static int CalculateTotalBurnableCandleV2(int n, int k)
+        public static int CalculateTotalBurnableCandleV2(int initialCandles, int leftoversPerCandle)
         {
             int totalCandlesBurned = 0;
-            int candles = n;
+            int candles = initialCandles;
             int leftovers = 0;
 
             while (candles > 0)
@@ -47,8 +47,8 @@ namespace algorithm.Candles
                 leftovers += candles; // Each burned candle produces 1 leftover
 
                 // Create new candles from leftovers
-                candles = leftovers / k; // Number of new candles
-                leftovers = leftovers % k; // Remaining leftovers
+                candles = leftovers / leftoversPerCandle; // Number of new candles
+                leftovers = leftovers % leftoversPerCandle; // Remaining leftovers
             }
 
             return totalCandlesBurned;
