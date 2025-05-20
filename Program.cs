@@ -2,23 +2,19 @@
 using Tree;
 
 
-TreeNode rootNode = new TreeNode(5);
-rootNode.left = new TreeNode(3);
-rootNode.left.left = new TreeNode(1);
-rootNode.left.right = new TreeNode(4);
-rootNode.left.left.left = null;
-rootNode.left.left.right = new TreeNode(2);
+TreeNode rootNode = new TreeNode(1);
+rootNode.left = new TreeNode(2);
+rootNode.left.left = new TreeNode(4);
+rootNode.left.right = new TreeNode(5);
 
-rootNode.right = new TreeNode(8);
-rootNode.right.left = new TreeNode(7);
-rootNode.right.right = new TreeNode(9);
+rootNode.right = new TreeNode(3);
+rootNode.right.left = new TreeNode(6);
+rootNode.right.right = new TreeNode(7);
 rootNode.PrintBFS();
 
-var temp = LowestCommonAncestorBinarySearchTree.LowestCommonAncestor(rootNode, rootNode.left, rootNode.right);
-Console.WriteLine(temp.val);
+var listInt = BinaryTreeLevelOrderTraversal.LevelOrderV2(rootNode);
+rootNode.PrintLevelOrder(listInt);
 
-var tem2 = LowestCommonAncestorBinarySearchTree.LowestCommonAncestor(rootNode, rootNode.left, rootNode.left.right);
-Console.WriteLine(tem2.val);
 
 
 

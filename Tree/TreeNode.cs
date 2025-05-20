@@ -39,11 +39,22 @@ public class TreeNode
         }
     }
 
-
     public void PrintDFS()
     {
         Console.WriteLine(val);
         if (left != null) left.PrintDFS();
         if (right != null) right.PrintDFS();
+    }
+
+    public void PrintLevelOrder(List<List<int>> list)
+    {
+        foreach (var listInt in list)
+        {
+            foreach (var item in listInt)
+            {
+                Console.Write(item + " ");
+            }
+            Console.WriteLine();
+        }
     }
 }
