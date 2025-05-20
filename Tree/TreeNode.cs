@@ -57,4 +57,12 @@ public class TreeNode
             Console.WriteLine();
         }
     }
+
+    public void PrintRightSideView(List<int> items)
+    {
+        foreach (var item in items)
+        {
+            Console.WriteLine(item);
+        }
+    }
 }
