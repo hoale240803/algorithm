@@ -1,25 +1,24 @@
-﻿using algorithm.Candles;
-
-// Input: n=5, k=2
-// Output: 9
-Console.WriteLine(Candle.CalculateTotalBurnableCandle(5, 2));
-
-// Input: n=2, k=2
-// Output: 3
-Candle c2 = new Candle();
-Console.WriteLine(Candle.CalculateTotalBurnableCandle(2, 2));
-
-// Input: n=1, k=1
-// Output: infinite loop 
-// Candle c3 = new Candle();
-// Console.WriteLine(Candle.CalculateTotalBurnableCandleV2(1, 1));
+﻿using algorithm.BinarySearch;
+using Tree;
 
 
+TreeNode rootNode = new TreeNode(5);
+rootNode.left = new TreeNode(3);
+rootNode.left.left = new TreeNode(1);
+rootNode.left.right = new TreeNode(4);
+rootNode.left.left.left = null;
+rootNode.left.left.right = new TreeNode(2);
 
+rootNode.right = new TreeNode(8);
+rootNode.right.left = new TreeNode(7);
+rootNode.right.right = new TreeNode(9);
+rootNode.PrintBFS();
 
+var temp = LowestCommonAncestorBinarySearchTree.LowestCommonAncestor(rootNode, rootNode.left, rootNode.right);
+Console.WriteLine(temp.val);
 
-
-
+var tem2 = LowestCommonAncestorBinarySearchTree.LowestCommonAncestor(rootNode, rootNode.left, rootNode.left.right);
+Console.WriteLine(tem2.val);
 
 
 

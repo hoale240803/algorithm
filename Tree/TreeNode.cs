@@ -22,9 +22,20 @@ public class TreeNode
         while (queue.Count > 0)
         {
             var node = queue.Dequeue();
+            if (node == null)
+            {
+                Console.WriteLine("null");
+                continue;
+            }
             Console.WriteLine(node.val);
-            if (node.left != null) queue.Enqueue(node.left);
-            if (node.right != null) queue.Enqueue(node.right);
+            if (node.left != null)
+                queue.Enqueue(node.left);
+            else
+                Console.WriteLine("null");
+            if (node.right != null)
+                queue.Enqueue(node.right);
+            else
+                Console.WriteLine("null");
         }
     }
 
