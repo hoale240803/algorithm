@@ -1,18 +1,6 @@
-﻿using algorithm.BinarySearch;
-using Tree;
+﻿using Algorithm.BitManipulation;
 
-
-TreeNode rootNode = new TreeNode(5);
-rootNode.left = new TreeNode(4);
-
-rootNode.right = new TreeNode(6);
-rootNode.right.left = new TreeNode(3);
-rootNode.right.right = new TreeNode(7);
-rootNode.PrintBFS();
-
-ValidBST b = new ValidBST();
-Console.WriteLine(b.IsValidBST(rootNode));
-
+Console.WriteLine("Sum of 4 and 7 is: " + SumOfTwoInteger.GetSum(4, 7));
 
 
 
