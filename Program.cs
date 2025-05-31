@@ -1,14 +1,10 @@
-﻿using Graph;
+﻿using algorithm.DP;
+using Graph;
 
-AlienDictionary alienDictionary = new AlienDictionary();
+int[][] matrix = [[1, 2, 3], [2, 1, 4], [7, 6, 5]];
+LongestIncreasingPathDP lip = new LongestIncreasingPathDP();
 
-string[] s = ["hrn", "hrf", "er", "enn", "rfnn"];
-
-Console.WriteLine(alienDictionary.foreignDictionary(s));
-
-
-
-
+Console.WriteLine(lip.LongestIncreasingPath(matrix));
 
 
 
