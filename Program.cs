@@ -1,10 +1,20 @@
 ﻿using algorithm.DP;
-using Graph;
 
-int[][] matrix = [[1, 2, 3], [2, 1, 4], [7, 6, 5]];
-LongestIncreasingPathDP lip = new LongestIncreasingPathDP();
+List<List<string>> tickets = [["HOU", "JFK"], ["SEA", "JFK"], ["JFK", "SEA"], ["JFK", "HOU"]];
+ReconstructionFlightPath reconstructionFlightPath = new ReconstructionFlightPath();
+var res = reconstructionFlightPath.FindItinerary(tickets);
 
-Console.WriteLine(lip.LongestIncreasingPath(matrix));
+List<List<string>> tickets2 = [["BUF", "HOU"], ["HOU", "SEA"], ["JFK", "BUF"]];
+var res2 = reconstructionFlightPath.FindItinerary2(tickets2);
+
+
+List<List<string>> tickets3 = [["JFK", "SFO"], ["JFK", "ATL"], ["SFO", "ATL"], ["ATL", "JFK"], ["ATL", "SFO"]];
+var res3 = reconstructionFlightPath.FindItinerary3(tickets3);
+
+
+Console.WriteLine(reconstructionFlightPath.ToString(res));
+Console.WriteLine(reconstructionFlightPath.ToString(res2));
+Console.WriteLine(reconstructionFlightPath.ToString(res3));
 
 
 
