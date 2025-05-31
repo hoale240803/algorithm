@@ -1,11 +1,10 @@
-﻿using Algorithm.BitManipulation;
+﻿using Graph;
 
-Console.WriteLine("Sum of 4 and 7 is: " + SumOfTwoInteger.GetSum(4, 7));
+AlienDictionary alienDictionary = new AlienDictionary();
 
+string[] s = ["hrn", "hrf", "er", "enn", "rfnn"];
 
-
-
-
+Console.WriteLine(alienDictionary.foreignDictionary(s));
 
 
 
