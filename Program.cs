@@ -1,12 +1,13 @@
-﻿using algorithm.Backtracking;
-
-Combination c = new Combination();
-var nums = new int[] { 2, 5, 6, 9 };
-var target = 9;
-var res = c.CombineSum(nums, target);
-
-
-c.ToString(res);
+﻿
+WordDictionary wordDictionary = new WordDictionary();
+wordDictionary.AddWord("day");
+wordDictionary.AddWord("bay");
+wordDictionary.AddWord("may");
+Console.WriteLine(wordDictionary.Search("say")); // false
+Console.WriteLine(wordDictionary.Search("dat")); // false
+Console.WriteLine(wordDictionary.Search("day")); // True
+Console.WriteLine(wordDictionary.Search(".ay")); // True
+Console.WriteLine(wordDictionary.Search("b..")); // True
 
 
 
