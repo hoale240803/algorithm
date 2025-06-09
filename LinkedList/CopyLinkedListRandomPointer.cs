@@ -40,7 +40,156 @@ public class CopyLinkedListRandomPointer
 
 
 
+    // Recursion + hashmap
 
+    private Dictionary<Node, Node> map = new Dictionary<Node, Node>();
+
+    public Node copyRandomList(Node head)
+    {
+        if (head == null) return null;
+        if (map.ContainsKey(head)) return map[head];
+
+        Node copy = new Node(head.val);
+        map[head] = copy;
+        copy.next = copyRandomList(head.next);
+
+        if (head.random != null)
+        {
+            copy.random = copyRandomList(head.random);
+        }
+        else
+        {
+            copy.random = null;
+        }
+
+        return copy;
+    }
+
+    // Hashmap (Two passes)
+
+    public Node copyRandomList2(Node head)
+    {
+        Dictionary<Node, Node> oldToCopy = new Dictionary<Node, Node>();
+
+        Node cur = head;
+
+        while (cur != null)
+        {
+            Node copy = new Node(cur.val);
+            oldToCopy[cur] = copy;
+            cur = cur.next;
+        }
+
+        cur = head;
+
+        while (cur != null)
+        {
+            Node copy = oldToCopy[cur];
+            copy.next = cur.next != null ? oldToCopy[cur.next] : null;
+            copy.random = cur.random != null ? oldToCopy[cur.random] : null;
+            cur = cur.next;
+        }
+
+        return head != null ? oldToCopy[head] : null;
+    }
+
+    // Hash map (one pass)
+    public Node copyRandomList3(Node head)
+    {
+        if (head == null) return null;
+
+        Dictionary<Node, Node> oldToCopy = new Dictionary<Node, Node>();
+
+        Node cur = head;
+
+        while (cur != null)
+        {
+            if (!oldToCopy.ContainsKey(cur))
+            {
+                oldToCopy[cur] = new Node(cur.val);
+            }
+            else
+            {
+                oldToCopy[cur].val = cur.val;
+            }
+
+            if (cur.next != null)
+            {
+                if (!oldToCopy.ContainsKey(cur.next))
+                {
+                    oldToCopy[cur.next] = new Node(0);
+                }
+                oldToCopy[cur].next = oldToCopy[cur.next];
+            }
+            else
+            {
+                oldToCopy[cur].next = null;
+            }
+
+            if (cur.random != null)
+            {
+                if (!oldToCopy.ContainsKey(cur.random))
+                {
+                    oldToCopy[cur.random] = new Node(0);
+                }
+
+                oldToCopy[cur].random = oldToCopy[cur.random];
+            }
+            else
+            {
+                oldToCopy[cur].random = null;
+            }
+
+            cur = cur.next;
+        }
+
+        return oldToCopy[head];
+    }
+
+    // Space Optimized -I
+
+    public Node copyRandomList4(Node head)
+    {
+        if (head == null)
+        {
+            return null;
+        }
+
+        Node l1 = head;
+        while (l1 != null)
+        {
+            Node l2 = new Node(l1.val);
+            l2.next = l1.next;
+            l1.next = l2;
+            l1 = l2.next;
+        }
+
+        Node newHead = head.next;
+        l1 = head;
+        while (l1 != null)
+        {
+            if (l1.random != null)
+            {
+                l1.next.random = l1.random.next;
+            }
+
+            l1 = l1.next.next;
+        }
+
+        l1 = head;
+        while (l1 != null)
+        {
+            Node l2 = l1.next;
+            l1.next = l2.next;
+            if (l2.next != null)
+            {
+                l2.next = l2.next.next;
+            }
+            l1 = l1.next;
+        }
+
+        return newHead;
+    }
 }
 
 
