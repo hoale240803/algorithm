@@ -41,9 +41,6 @@ public class DSU
 }
 public class MinCostToConnectPoints
 {
-
-
-
     public int MinCostConnectPoints(int[][] points)
     {
         int n = points.Length;
@@ -73,9 +70,7 @@ public class MinCostToConnectPoints
         return res;
     }
 
-
     // Prim's algorithm
-
     public int MinCostConnectPoints2(int[][] points)
     {
         int n = points.Length, node = 0;
