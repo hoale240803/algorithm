@@ -1,16 +1,11 @@
 ﻿
-using algorithm.Tries;
+using algorithm.ArrayAndHashing;
 
-WordSearch wordSearchII = new WordSearch();
 
-string[] words = { "bat", "cat", "back", "backend", "stack" };
-char[][] board = new char[][]
-{
-  ['a','b','c','d'],
-  ['s','a','a','t'],
-  ['a','c','k','e'],
-  ['a','c','d','n']
-};
+ContainsDuplicate cd = new ContainsDuplicate();
 
-List<string> result = wordSearchII.FindWords(board, words);
-wordSearchII.PrintResult(result);
+// var nums = new int[] { 1, 2, 2, 4, 5, 6, 7, 8, 9, 10 };
+var nums = new int[] { 100, 200, 300, 100, 500, 600, 200 };
+cd.hasDuplicate(nums);
+
+System.Console.WriteLine("result: " + cd.hasDuplicate(nums));
