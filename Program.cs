@@ -1,13 +1,7 @@
 ﻿
 using algorithm.ArrayAndHashing;
+using algorithm.Greedy;
 using algorithm.Intervals;
 
-NonOverlappingIntervals nonOverlappingIntevals = new NonOverlappingIntervals();
-var res = nonOverlappingIntevals.EraseOverlapIntervals3(new int[][]
-{
-    new int[] { 1, 2 },
-    new int[] { 2, 4 },
-    new int[] { 1, 4 },
-});
-
-Console.WriteLine(res); // Output: 1s
+MaximumSubarray maximumSubarray = new MaximumSubarray();
+Console.WriteLine(maximumSubarray.MaxSubArray2(new int[] { 2, -3, 4, -2, 2, 1, -1, 4 })); // Output: 6
