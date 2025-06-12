@@ -1,10 +1,20 @@
 ﻿
 using algorithm.ArrayAndHashing;
+using algorithm.Intervals;
 
-PlusOneClass plusOne = new PlusOneClass();
+MergeIntervals mergeIntervals = new MergeIntervals();
 
-var res = plusOne.PlusOne(new int[] { 1, 2, 3 });
-Console.WriteLine(string.Join(", ", res));
 
-var res2 = plusOne.PlusOne(new int[] { 9 });
-Console.WriteLine(string.Join(", ", res2));
+
+var res = mergeIntervals.Merge2(new int[][]
+{
+    new int[] { 1, 3 },
+    new int[] { 2, 6 },
+    new int[] { 8, 10 },
+    new int[] { 15, 18 }
+});
+
+foreach (var interval in res)
+{
+    Console.WriteLine($"[{interval[0]}, {interval[1]}]");
+}
