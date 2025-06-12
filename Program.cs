@@ -2,19 +2,12 @@
 using algorithm.ArrayAndHashing;
 using algorithm.Intervals;
 
-MergeIntervals mergeIntervals = new MergeIntervals();
-
-
-
-var res = mergeIntervals.Merge2(new int[][]
+NonOverlappingIntervals nonOverlappingIntevals = new NonOverlappingIntervals();
+var res = nonOverlappingIntevals.EraseOverlapIntervals3(new int[][]
 {
-    new int[] { 1, 3 },
-    new int[] { 2, 6 },
-    new int[] { 8, 10 },
-    new int[] { 15, 18 }
+    new int[] { 1, 2 },
+    new int[] { 2, 4 },
+    new int[] { 1, 4 },
 });
 
-foreach (var interval in res)
-{
-    Console.WriteLine($"[{interval[0]}, {interval[1]}]");
-}
+Console.WriteLine(res); // Output: 1s
