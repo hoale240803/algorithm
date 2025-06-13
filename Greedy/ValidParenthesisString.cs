@@ -55,7 +55,7 @@ public class ValidParenthesisString
             else if (c == ')')
             {
                 leftMin--;
-                leftMax++;
+                leftMax--;
             }
             else
             {
