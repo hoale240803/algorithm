@@ -1,7 +1,10 @@
 ﻿
-using algorithm.ArrayAndHashing;
-using algorithm.Greedy;
-using algorithm.Intervals;
+using algorithm.Backtracking;
 
-MaximumSubarray maximumSubarray = new MaximumSubarray();
-Console.WriteLine(maximumSubarray.MaxSubArray2(new int[] { 2, -3, 4, -2, 2, 1, -1, 4 })); // Output: 6
+
+CombinationSumClass cb = new CombinationSumClass();
+List<List<int>> result = cb.CombinationSum(new int[] { 2, 3, 6, 9 }, 9);
+foreach (var combination in result)
+{
+    Console.WriteLine(string.Join(", ", combination));
+}
