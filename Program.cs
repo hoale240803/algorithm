@@ -1,10 +1,11 @@
 ﻿
 using algorithm.Backtracking;
 
-
-CombinationSumClass cb = new CombinationSumClass();
-List<List<int>> result = cb.CombinationSum(new int[] { 2, 3, 6, 9 }, 9);
-foreach (var combination in result)
+Permutations permutations = new Permutations();
+var result1 = permutations.Permute(new int[] { 1, 2, 3 });
+var result2 = permutations.Permute2(new int[] { 1, 2, 3 });
+Console.WriteLine("Permutations using Recursion:");
+foreach (var perm in result1)
 {
-    Console.WriteLine(string.Join(", ", combination));
+    Console.WriteLine(string.Join(", ", perm));
 }
