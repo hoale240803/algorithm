@@ -1,9 +1,9 @@
 ﻿
-using algorithm.Backtracking;
+using algorithm.Backtrackingl;
 
-SubsetII subsetII = new SubsetII();
-List<List<int>> result = subsetII.SubsetsWithDup(new int[] { 1, 2, 2 });
-foreach (var subset in result)
+PalindromePartitioning palindromePartitioning = new PalindromePartitioning();
+List<List<string>> result = palindromePartitioning.Partition("aab");
+foreach (var partition in result)
 {
-    Console.WriteLine("[" + string.Join(", ", subset) + "]");
+    Console.WriteLine(string.Join(", ", partition));
 }
