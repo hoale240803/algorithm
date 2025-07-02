@@ -1,12 +1,13 @@
 ﻿
 using algorithm.Backtracking;
 
-LetterCombinationsOfAPhoneNumber letterCombinationsOfAPhoneNumber = new LetterCombinationsOfAPhoneNumber();
-var res = letterCombinationsOfAPhoneNumber.LetterCombinations("23");
-var res1 = letterCombinationsOfAPhoneNumber.LetterCombinations1("23");
-
-foreach (var item in res1)
+NQueen nQueen = new NQueen();
+List<List<string>> result = nQueen.SolveNQueens(4);
+foreach (var solution in result)
 {
-    Console.WriteLine(item);
+    foreach (var row in solution)
+    {
+        Console.WriteLine(row);
+    }
+    Console.WriteLine();
 }
-
