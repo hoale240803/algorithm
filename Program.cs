@@ -1,13 +1,17 @@
 ﻿
 using algorithm.Backtracking;
+using algorithm.MathAndGeography;
 
-NQueen nQueen = new NQueen();
-List<List<string>> result = nQueen.SolveNQueens(4);
-foreach (var solution in result)
+RotateImage rotateImage = new RotateImage();
+int[][] matrix = new int[][]
 {
-    foreach (var row in solution)
-    {
-        Console.WriteLine(row);
-    }
-    Console.WriteLine();
+    new int[] { 1, 2, 3 },
+    new int[] { 4, 5, 6 },
+    new int[] { 7, 8, 9 }
+};
+
+rotateImage.Rotate1(matrix);
+foreach (var row in matrix)
+{
+    Console.WriteLine(string.Join(", ", row));
 }
