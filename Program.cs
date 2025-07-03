@@ -1,8 +1,11 @@
 ﻿using algorithm.MathAndGeography;
 
 
+PlusOneClass plusOneClass = new PlusOneClass();
+var res = plusOneClass.PlusOne(new int[] { 1, 2, 3 });
+// print the result
+Console.WriteLine(string.Join(", ", res));
 
-NonCyclicalNumber nonCyclicalNumber = new NonCyclicalNumber();
-
-System.Console.WriteLine(nonCyclicalNumber.IsHappy1(100));
-System.Console.WriteLine(nonCyclicalNumber.IsHappy1(101));
+var res1 = plusOneClass.PlusOne(new int[] { 9, 9, 9 });
+// print the result
+Console.WriteLine(string.Join(", ", res1));
