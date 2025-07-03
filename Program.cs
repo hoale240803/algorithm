@@ -1,7 +1,4 @@
 ﻿using algorithm.MathAndGeography;
 
-PowXN powXN = new PowXN();
-Console.WriteLine(powXN.MyPow1(2.00000, 5));
-Console.WriteLine(powXN.MyPow1(1.10000, 10));
-Console.WriteLine(powXN.MyPow1(2.00000, -3));
-
+Multiplication multiplication = new Multiplication();
+Console.WriteLine(multiplication.Multiply("1", "456")); // Output: "56088"
