@@ -1,11 +1,7 @@
 ﻿using algorithm.MathAndGeography;
 
+PowXN powXN = new PowXN();
+Console.WriteLine(powXN.MyPow1(2.00000, 5));
+Console.WriteLine(powXN.MyPow1(1.10000, 10));
+Console.WriteLine(powXN.MyPow1(2.00000, -3));
 
-PlusOneClass plusOneClass = new PlusOneClass();
-var res = plusOneClass.PlusOne(new int[] { 1, 2, 3 });
-// print the result
-Console.WriteLine(string.Join(", ", res));
-
-var res1 = plusOneClass.PlusOne(new int[] { 9, 9, 9 });
-// print the result
-Console.WriteLine(string.Join(", ", res1));
