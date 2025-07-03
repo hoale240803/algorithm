@@ -1,13 +1,13 @@
-﻿
-using algorithm.Backtracking;
-using algorithm.MathAndGeography;
+﻿using algorithm.MathAndGeography;
 
-SpiralMatrix spiralMatrix = new SpiralMatrix();
-int[][] matrix = new int[][]
+SetMatrixZeroes setMatrixZeroes = new SetMatrixZeroes();
+setMatrixZeroes.SetZeroes2(new int[][]
 {
-    new int[] { 1, 2, 3 },
-    new int[] { 4, 5, 6 },
-    new int[] { 7, 8, 9 }
-};
-List<int> result = spiralMatrix.SpiralOrder(matrix);
-Console.WriteLine(string.Join(", ", result));
+    new int[] { 1, 1, 1 },
+    new int[] { 1, 0, 1 },
+    new int[] { 1, 1, 1 }
+});
+
+// print the modified matrix
+Console.WriteLine("Modified Matrix:");
+setMatrixZeroes.PrintModifiedMatrix();
