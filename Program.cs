@@ -1,12 +1,17 @@
-﻿using algorithm.MathAndGeography;
+﻿using algorithm.Graph;
+
+MaxAreaOfIslandClass maxAreaOfIsland = new MaxAreaOfIslandClass();
+
+var grid = new int[][]
+{
+    [1, 1, 0, 0, 0],
+    [1, 1, 0, 1, 1],
+    [0, 0, 0, 0, 0],
+    [0, 1, 1, 0, 1],
+    [0, 0, 0, 1, 1]
+};
+int result = maxAreaOfIsland.MaxAreaOfIsland(grid);
+// Output the result should be 4
+Console.WriteLine($"The maximum area of an island is: {result}");
 
 
-CountSquares countSquares = new CountSquares();
-countSquares.Add([1, 1]);
-countSquares.Add([2, 2]);
-countSquares.Add([1, 2]);
-
-System.Console.WriteLine(countSquares.Count([2, 1]));   // return 1.
-System.Console.WriteLine(countSquares.Count([3, 3]));
-countSquares.Add([2, 2]);     // Duplicate points are allowed.
-System.Console.WriteLine(countSquares.Count([2, 1]));
