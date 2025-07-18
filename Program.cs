@@ -1,19 +1,16 @@
 ﻿using algorithm.Graph;
 
-CloneGraphClass cloneGraph = new CloneGraphClass();
-Node originalGraph = new Node(1);
-Node neighbor1 = new Node(2);
-Node neighbor2 = new Node(3);
-originalGraph.neighbors.Add(neighbor1);
-originalGraph.neighbors.Add(neighbor2);
+RottingFruit rottingFruit = new RottingFruit();
 
-// print before cloning ex: [[2,3],[1],[1]]
-var nodeBeforeStr = originalGraph.ToString();
-Console.WriteLine($"Original graph: {nodeBeforeStr}");
+int[][] grid = new int[][]
+{
+    new int[] { 2, 1, 1 },
+    new int[] { 1, 1, 0 },
+    new int[] { 0, 1, 1 }
+};
 
-// print after cloning ex: [[2],[1,3],[2]]
-var nodeAfterStr = cloneGraph.CloneGraph(originalGraph);
-Console.WriteLine($"Cloned graph: {nodeAfterStr}");
+int result = rottingFruit.OrangesRotting(grid);
+Console.WriteLine(result); // Output: 4
 
 
 
