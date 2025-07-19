@@ -1,23 +1,16 @@
 ﻿using algorithm.Graph;
 
 
-PacificAtlanticWater pacificAtlanticWater = new PacificAtlanticWater();
+SurroundedRegions sr = new SurroundedRegions();
 
-int[][] heights = new int[][]
+char[][] board = new char[][]
 {
-    new int[] { 4,2,7,3,4 },
-    new int[] { 7,4,6,4,7 },
-    new int[] { 6,3,5,3,6 },
+['X','X','X','X'],['X','O','O','X'],['X','O','O','X'],['X','X','X','O']
 };
-List<List<int>> result = pacificAtlanticWater.PacificAtlantic(heights);
-
-
-foreach (var res in result)
+sr.Solve(board);
+foreach (var row in board)
 {
-    Console.WriteLine($"[{res[0]}, {res[1]}]");
+    Console.WriteLine(string.Join(" ", row));
 }
-
-
-
 
 
