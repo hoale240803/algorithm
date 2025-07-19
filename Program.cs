@@ -1,16 +1,21 @@
 ﻿using algorithm.Graph;
 
-RottingFruit rottingFruit = new RottingFruit();
 
-int[][] grid = new int[][]
+PacificAtlanticWater pacificAtlanticWater = new PacificAtlanticWater();
+
+int[][] heights = new int[][]
 {
-    new int[] { 2, 1, 1 },
-    new int[] { 1, 1, 0 },
-    new int[] { 0, 1, 1 }
+    new int[] { 4,2,7,3,4 },
+    new int[] { 7,4,6,4,7 },
+    new int[] { 6,3,5,3,6 },
 };
+List<List<int>> result = pacificAtlanticWater.PacificAtlantic(heights);
 
-int result = rottingFruit.OrangesRotting(grid);
-Console.WriteLine(result); // Output: 4
+
+foreach (var res in result)
+{
+    Console.WriteLine($"[{res[0]}, {res[1]}]");
+}
 
 
 
