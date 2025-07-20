@@ -1,16 +1,12 @@
 ﻿using algorithm.Graph;
 
-
-SurroundedRegions sr = new SurroundedRegions();
-
-char[][] board = new char[][]
+CourseSchedule courseSchedule = new CourseSchedule();
+int numCourses = 2;
+int[][] prerequisites = new int[][]
 {
-['X','X','X','X'],['X','O','O','X'],['X','O','O','X'],['X','X','X','O']
+    new int[] { 1, 0 }
 };
-sr.Solve(board);
-foreach (var row in board)
-{
-    Console.WriteLine(string.Join(" ", row));
-}
 
+bool canFinish = courseSchedule.CanFinish(numCourses, prerequisites);
+Console.WriteLine($"Can finish all courses: {canFinish}");
 
