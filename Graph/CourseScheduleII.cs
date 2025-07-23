@@ -3,7 +3,6 @@ namespace algorithm.Graph;
 
 public class CourseScheduleII
 {
-
     // Cycle Dêtction (DFS)
     public int[] FindOrder(int numCourses, int[][] prerequisites)
     {
