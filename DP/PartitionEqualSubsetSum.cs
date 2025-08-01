@@ -54,7 +54,7 @@ public class PartitionEqualSubsetSum
         }
         memo = new bool?[nums.Length + 1, sum / 2 + 1];
 
-        return Dfs(nums, 0, sum / 2);
+        return Dfs1(nums, 0, sum / 2);
     }
 
 
